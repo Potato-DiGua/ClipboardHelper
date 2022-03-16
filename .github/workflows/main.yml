@@ -1,0 +1,39 @@
+name: Android CI
+
+on:
+  push:
+    tags:
+      - v*
+  pull_request:
+    tags:
+      - v*
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'zulu'
+        java-version: '11'
+        java-package: jdk
+    
+    - name: Checkout Android Keystore
+      uses: actions/checkout@v2
+      with:
+        repository: Potato-DiGua/android-key-store
+        token: ${{ secrets.TOKEN }}
+        path: keystore
+    
+    - name: Build with Gradle
+      run: bash ./gradlew assembleRelease
+    
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: |
+          app/build/outputs/apk/release/*.apk
