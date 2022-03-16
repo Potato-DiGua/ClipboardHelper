@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">剪贴板助手</string>
+    <string name="usage">
+        使用前必须让本应用位于前台\n
+        您现在可以在 adb shell 中使用以下命令写入剪贴板或从剪贴板读取:
+    </string>
+    <string name="cmd" translatable="false">
+        1. adb shell am broadcast -a clipper.set -f 16777216 -e text \'This may be pasted now\' \n
+        2. adb shell am broadcast -a clipper.get -f 16777216 \n
+        3. adb shell am broadcast -n "com.potatodigua.clipboardhelper/.ClipperReceiver" -f 32
+    </string>
+    <string name="clipboard_label">剪贴板内容：</string>
+    <string name="has_received">收到广播</string>
+    <string name="background_tip">目前应用处于后台，请先打开应用</string>
+</resources>

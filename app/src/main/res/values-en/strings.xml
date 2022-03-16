@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Clipboard Helper</string>
+    <string name="usage">
+        This application must be in the foreground before use. \n
+        You can now copy to or paste from clipboard using the following commands in adb shell:
+    </string>
+    <string name="clipboard_label">Clipboard contents:</string>
+    <string name="has_received">received the broadcast</string>
+    <string name="background_tip">The app is currently in the background, please open the app first</string>
+</resources>
