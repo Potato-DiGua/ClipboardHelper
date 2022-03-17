@@ -6,7 +6,7 @@
 安装APP,使用如下adb命令操作剪贴板
 ```shell
 # 写
-adb shell am broadcast -n ""com.potatodigua.clipboardhelper/.ClipperReceiver"" -f 32 -e text 'This may be pasted now'
+adb shell am broadcast -n "com.potatodigua.clipboardhelper/.ClipperReceiver" -a clipper.set -f 32 -e text 'This may be pasted now'
 # 读
-adb shell am broadcast -n "com.potatodigua.clipboardhelper/.ClipperReceiver" -f 32
+adb shell am broadcast -n "com.potatodigua.clipboardhelper/.ClipperReceiver" -a clipper.get -f 32
 ```
