@@ -1,3 +1,4 @@
+![Download](https://img.shields.io/github/downloads/Potato-DiGua/ClipboardHelper/total)
 # ClipboardHelper
 一款帮助开发人员使用 adb 读取/写入 Android 剪贴板的应用。
 ### [English README](https://github.com/Potato-DiGua/ClipboardHelper/blob/master/README_EN.md)
