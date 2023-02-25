@@ -1,7 +1,7 @@
 # ClipboardHelper
 An app that helps developers read/write Android clipboard using adb.
 ### [Download](https://github.com/Potato-DiGua/ClipboardHelper/releases)
-# 使用方法
+# 
 Install the APP and use the following adb command to operate the clipboard.
 ```shell
 # write
